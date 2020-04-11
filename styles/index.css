@@ -90,13 +90,15 @@ main{
 .readmorebtn:hover{
     opacity: 0.8;
 }
+section{
+    width:80% ;
+}
 .toprated{
-    width: 80%;
-    border: 1px solid black;
+    width: 100%;
     height: auto;
 }
 .toprated .row{
-    margin-top: 40px;
+    margin-bottom : 40px;
     display: flex;
     height: 15vh;
     justify-content: space-around;
@@ -104,4 +106,29 @@ main{
 }
 .toprated .row .item2{
     width: 30%;
+    display:flex;
+    flex-direction:row;
+}
+.toprated .row img{
+    margin-top: 20px;
+    width:30%;
+    
+}
+.toprated .row .item2 .rightpart{
+    width:65%;
+    display:flex;
+    flex-direction:column;
+    margin-left: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
+
+}
+.toprated .row .item2 .rightpart p{
+    margin: 0px;
+    padding: 0px;
+}
+.loadmore{
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
 }
