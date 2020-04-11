@@ -23,9 +23,14 @@ fetch(req)
         div.className='visibleslide'
         slider.appendChild(div);
         for(let i=0;i<3;i++){
+            var inp = document.createElement('input');
+            inp.setAttribute("type", "button");
+            inp.setAttribute("value", "Read More");
+            inp.className='readmorebtn';
             var div_2=document.createElement('div');
             div_2.className='item';
             div.appendChild(div_2);
+            div_2.appendChild(inp);
             div_2.style.backgroundImage='url('+date.articles[k].urlToImage+')';
             var p = document.createElement('p');
             p.className='title'
@@ -51,7 +56,6 @@ function gonext(){
         counter=-1;
     }
     counter ++
-    console.log(counter)
     for(i=0;i<vis.length;i++){
         vis[i].style.transition= 'transform 0.4s ease-in-out'
     vis[i].style.transform='translateX('+(-counter* slider.offsetWidth) + "px)";
