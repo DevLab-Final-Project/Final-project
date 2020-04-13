@@ -191,5 +191,27 @@ body{
     }
   }
 
+  .fb-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    transition: transform .2s;
+  }
+  
+  .fb-icon:hover {
+    transform: scale(1.2); 
+  }
+  
+  .icon-note {
+    position: absolute;
+    top: 88%;
+    right: 2%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+     font-style: italic;
+    font-size: 15px;
+  }
+
   /*-----------------------*/
   
