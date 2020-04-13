@@ -42,14 +42,14 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
                 var br=e.target.getAttribute('o') 
                 var body =document.getElementsByTagName('body')[0]
                 var model = document.createElement('div');
-                model.className='modal';
+                model.className='modalWindow';
                 slider.appendChild(model);
                 var modelcont = document.createElement('div');
-                modelcont.className='modal-content';
+                modelcont.className='modalContent';
                 model.appendChild(modelcont);
 
                  var span = document.createElement('span');
-                 span.className='close';
+                 span.className='closeX';
                  span.textContent='&times'
                  modelcont.appendChild(span)
 
@@ -173,14 +173,14 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
             var br=e.target.getAttribute('o') 
             var body =document.getElementsByTagName('body')[0]
             var model = document.createElement('div');
-            model.className='modal';
+            model.className='modalWindow';
             slider.appendChild(model);
             var modelcont = document.createElement('div');
-            modelcont.className='modal-content';
+            modelcont.className='modalContent';
             model.appendChild(modelcont);
 
              var span = document.createElement('span');
-             span.className='close';
+             span.className='closeX';
              span.textContent='&times'
              modelcont.appendChild(span)
 
@@ -269,14 +269,14 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
                 var br=e.target.getAttribute('o') 
                 var body =document.getElementsByTagName('body')[0]
                 var model = document.createElement('div');
-                model.className='modal';
+                model.className='modalWindow';
                 slider.appendChild(model);
                 var modelcont = document.createElement('div');
-                modelcont.className='modal-content';
+                modelcont.className='modalContent';
                 model.appendChild(modelcont);
     
                  var span = document.createElement('span');
-                 span.className='close';
+                 span.className='closeX';
                  span.textContent='&times'
                  modelcont.appendChild(span)
     
