@@ -2,6 +2,13 @@
     box-sizing: border-box;
     font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
+#sidebarContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: center;
+}
 aside {
     width: 20%;
     padding-left: .5rem;
@@ -12,6 +19,7 @@ aside {
     color: #29627e;
     z-index: 1;
     overflow: auto;
+    overflow-x: hidden; 
     border: 1px solid blue;
 }
 aside > div {
@@ -62,7 +70,7 @@ div {
     padding: 0;
     border: 1px solid #888;
     max-width: 90vw;
-    max-height: 90vh;
+    height: 90vh;
     text-align: center;
     box-shadow: 5px 10px 8px #888888;
     -webkit-animation-name: animatetop;
