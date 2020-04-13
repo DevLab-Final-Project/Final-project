@@ -68,10 +68,49 @@ fetch("http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d25da6256e5
     }
 
     
+    let bestTitle = document.querySelectorAll(".bestTitle");
+    for (let i=0; i<bestTitle.length; i++){
+        bestTitle[i].addEventListener('click',function(){
+        let modalHeader = document.getElementById("modalHeader");
+        modalHeader.innerHTML =  articles[i].title; 
+
+        let modalImg = document.getElementById("modalImg");
+        modalImg.src =  articles[i].urlToImage; 
+
+        let modalNewsAuthor = document.getElementById("modalNewsAuthor");
+        modalNewsAuthor.innerHTML = "author: " + articles[i].author;
+
+        let modalNewsDescription = document.getElementById("modalNewsDescription");
+        modalNewsDescription.innerHTML = "description: " + articles[i].description;
+
+        let modalNewsUrl = document.getElementById("modalNewsUrl");
+        modalNewsUrl.innerHTML = "url:" ;
+
+        let modalLink = document.createElement("a");
+        modalLink.innerHTML = articles[i].url;
+        modalLink.href = articles[i].url;
+
+        modalNewsUrl.appendChild(modalLink);
+
+        let modalNewsDate = document.getElementById("modalNewsDate");
+        modalNewsDate.innerHTML = "publishedAt: " + articles[i].publishedAt;
+
+        
+        let bodyWidth = document.body.innerWidth;
+        document.body.style.overflow = "hidden";
+        document.body.style.width = bodyWidth;
+
+        modal.style.display = "block";
+      
+      });
+    }
+
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
+      document.body.style.overflow = "auto";
+      document.body.style.width= "auto";        
     }
      
   });
