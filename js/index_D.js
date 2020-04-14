@@ -1,9 +1,24 @@
 var slider = document.getElementById('slide')
 var next = document.getElementById('next')
 var prev = document.getElementById('prev');
+var sport=document.getElementById('sports')
+var busin=document.getElementById('business')
+var tech=document.getElementById('technology')
+
+ sport.addEventListener('click',()=>{
+ localStorage.setItem("Category",'sports' )})
+    
+    
+ busin.addEventListener('click',()=>{
+ localStorage.setItem("Category",'business' )})
 
 
-//date
+ tech.addEventListener('click',()=>{
+ localStorage.setItem("Category",'technology' )})
+
+
+
+ //date
 var dateObj = new Date();
 var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
 var day_2 = ('0' + dateObj.getDate()).slice(-2);
