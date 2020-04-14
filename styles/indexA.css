@@ -47,10 +47,10 @@ div {
 }
 
 /* The Modal (background) */
-.modal {
+.modalWindow {
   display: none; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 16; 
   left: 0;
   top: 0;
   width: 100%;
@@ -61,7 +61,7 @@ div {
 }
 
 /* Modal Content */
-.modal-content {
+.modalContent {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -99,15 +99,15 @@ div {
 }
 
 /* The Close Button */
-.close {
+.closeX {
   color: lightgrey;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeX:hover,
+.closeX:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
