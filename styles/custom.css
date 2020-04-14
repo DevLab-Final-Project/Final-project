@@ -22,7 +22,7 @@
 
 /* every odd div has different background color */
 #gridContainer > .gridChild:nth-child(odd) {    
-    background:#ddd;
+    background:#ccc;
 }
 
 /* everything inside div is displayed as a grid*/
@@ -59,4 +59,5 @@ a:hover {
     -webkit-transform: scale(0.8);    
     -ms-transform: scale(0.8);    
     transform: scale(0.8);
+    
 }

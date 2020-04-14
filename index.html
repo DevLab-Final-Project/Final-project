@@ -72,18 +72,18 @@
 
    <div id="sidebarContainer">
        <aside>
-           <h2>Best</h2>
+           <h3>Best</h3>
            <div class="bestNews">
                <img class = "imgBestNews" id = "firstBestImg" src="" alt="">
-               <h4 id = "firstBestTitle" class = "bestTitle"></h4>
+               <h5 id = "firstBestTitle" class = "bestTitle"></h5>
            </div>
            <div class="bestNews">
                <img class = "imgBestNews" id = "secondBestImg" src="" alt="">
-               <h4 id = "secondBestTitle" class = "bestTitle"></h4>
+               <h5 id = "secondBestTitle" class = "bestTitle"></h5>
            </div>
            <div class="bestNews">
                <img class = "imgBestNews" id = "thirdBestImg" src="" alt="">
-               <h4 id = "thirdBestTitle" class = "bestTitle"></h4>
+               <h5 id = "thirdBestTitle" class = "bestTitle"></h5>
            </div>
        </aside>
        <aside>
@@ -97,20 +97,26 @@
    
 
    <!-- The Modal -->
-   <div id="myModal" class="modal">
+   <div id="myModal" class="modalWindow">
 
        <!-- Modal content -->
-       <div class="modal-content">
+       <div class="modalContent">
            <div class="modal-header">
-               <span class="close">&times;</span>
+               <span class="closeX">&times;</span>
            </div>
            <div class="modal-body">
-               <h4 id = "modalHeader"></h4>
-               <img id = "modalImg" src="" alt="">
-               <p id = "modalNewsAuthor"></p>
-               <p id = "modalNewsDescription"></p>
-               <p id = "modalNewsUrl"></p>
-               <p id = "modalNewsDate"></p>
+                <div id = "modalTitle">
+                    <h4 id = "modalHeader"></h4>
+                </div>
+                <div id = "modalImage">
+                    <img id = "modalImg" src="" alt="">
+                </div>
+                <div id = "modalTitleInfo">
+                    <p id = "modalNewsAuthor"></p>
+                    <p id = "modalNewsDescription"></p>
+                    <p id = "modalNewsUrl"></p>
+                    <p id = "modalNewsDate"></p>
+                </div>
            </div>
            
        </div>
