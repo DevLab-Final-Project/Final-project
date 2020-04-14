@@ -53,8 +53,8 @@ fetch(uri)
     var arr=[];
     var br=0;
     var k =0
+    var checkk=0;
     
-    next.addEventListener('click', gonext);
 
 
 
@@ -73,7 +73,15 @@ fetch(uri)
             nums.appendChild(p)
 
         }
-    for(let i = 0;i<=3;i++){
+    for(let i = 0;i<=3;i++){ 
+    
+        if(k>=100){
+        checkk=1;
+        break;
+    }
+    else{
+        checkk=0;//for next btn
+    }
         if(date.articles[k].title.toLowerCase().startsWith(text.toLowerCase()) ){
             arr[br]=k;
             br++;
@@ -119,8 +127,18 @@ fetch(uri)
 var source = document.getElementById('SOURCE');
 if(source.checked){
     for(let i = 0;i<=3;i++){
-        
+
+         if(k>=100){
+        checkk=1;
+        break;
+    }
+    else{
+        checkk=0;
+    }
         if(date.articles[k].urlToImage && date.articles[k].source.name.toLowerCase().startsWith(text.toLowerCase()) ){
+        
+           
+            
         arr[br]=k
         br++; 
         var item = document.createElement('div');
@@ -163,8 +181,20 @@ if(source.checked){
 }
     var auth = document.getElementById('AUTHOR');
 if(auth.checked){
-    for(let i = 0;i<=3;i++){
-        
+
+        for(let i = 0;i<=3;i++){ 
+    
+            if(k>=100){
+            checkk=1;
+            break;
+        }
+        else{
+            checkk=0;//for next btn
+        }
+
+        if(date.articles[k].author==null){
+            date.articles[k].author='unknown'
+        }
         if(date.articles[k].urlToImage && date.articles[k].author.toLowerCase().startsWith(text.toLowerCase()) ){   
             arr[br]=k
             br++; 
@@ -208,6 +238,7 @@ if(auth.checked){
         }
     }
 }
+
 if(arr.length<5){
 
     prev.style.opacity= '0.5'
@@ -220,15 +251,36 @@ if(arr.length<5){
     prev.style.opacity= '1'
      prev.style.cursor='pointer'
  }
+ 
+ if(checkk<1){
+ next.addEventListener('click', gonext);
+ next.style.opacity= '1'
+ next.style.cursor='pointer'
+
+}
+   else{
+    next.style.opacity= '0.5'
+    next.style.cursor='not-allowed'
+    next.removeEventListener('click',gonext)
+       }
 
     }
     function gonext(){
+        console.log(arr)
         show3()
     }
 function goprev(e){
     
+    var  countchild = main.childElementCount;
+    if(countchild==4){
+    console.log(arr)
+    next.style.opacity= '1'
+    next.style.cursor='pointer'
+
+    next.addEventListener('click',gonext )
     e.target.style.opacity='1'
     k=arr[arr.length-8]
+    console.log(k)
     br=br-8;
     arr.pop()
     arr.pop()
@@ -238,6 +290,30 @@ function goprev(e){
     arr.pop()
     arr.pop()
     arr.pop()
+    }
+    else{
+        k=arr[arr.length-4-countchild]
+        br=br-4-countchild;
+        arr.pop();
+        arr.pop();
+        arr.pop();
+        arr.pop();
+        if(countchild==3){
+            arr.pop()
+            arr.pop();
+            arr.pop();
+        }if(countchild==2){
+            arr.pop()
+            arr.pop();
+        }
+        if(countchild==1){
+            arr.pop()
+        }
+        else{
+            main.innerHTML='go back please :D '
+        }
+    }
+    
     show3()
 }
 
