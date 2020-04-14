@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+#sidebarContainer{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
+align-content: center;
+}
+aside {
+  width: 100%;
+  padding-left: .5rem;
+  margin: 0 .5rem .2rem .2rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+  z-index: 1;
+  overflow: auto;
+  overflow-x: hidden; 
+  border: 1px solid blue;
+}
+aside > div {
+  margin: .5rem;
+}
+div {
+  font-family: 'Fira Sans', sans-serif;
+}
+.divClass{
+  background-color: lightgrey;
+  padding: .2rem;
+  margin: .5rem;
+}
+
+.bestNews .imgBestNews{
+  margin-right: .5rem;   
+  width: 50%;
+  height: 100%;
+  
+}
+.bestNews{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
+/* The Modal (background) */
+.modalWindow {
+  display: none; 
+  position: fixed; 
+  z-index: 16; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color:#696969; 
+  
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 5vh;
+  margin-top: 5vh;
+  padding: 0;
+  border: 1px solid #888;
+  max-width: 90vw;
+  height: 90vh;
+  text-align: center;
+  box-shadow: 5px 10px 8px #888888;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+.modal-body #modalImg{
+    width : 35%;
+    height : 35%;
+}
+#modalHeader{
+    margin-top: 1.5rem ;
+    margin-bottom:1.5rem;
+} 
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.closeX {
+  color: lightgrey;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeX:hover,
+.closeX:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  margin: 0 1.5rem 0 1.5rem;
+}
+#modalNewsAuthor, #modalNewsDescription, #modalNewsUrl, #modalNewsDate{
+  text-align: justify;
+  text-indent: 15%;
+}
+
+h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+ h3{
+  text-align: center;
+}
+
+
+/*End of the modal*/
