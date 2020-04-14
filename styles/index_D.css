@@ -87,7 +87,8 @@ main{
     opacity: 0.8;
 }
 section{
-    width:80% ;
+    width:100% ;
+
 }
 .toprated{
     width: 100%;
@@ -132,7 +133,8 @@ section{
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1; /* Sit on top */
+    z-index: 20; /* Sit on top */
+
     left: 0;
     top: 0;
     width: 100%; /* Full width */
