@@ -10,9 +10,9 @@ align-items: flex-end;
 align-content: center;
 }
 aside {
-  width: 20%;
+  width: 100%;
   padding-left: .5rem;
-  margin: 0 3rem .2rem 3rem;
+  margin: 0 .5rem .2rem .2rem;
   float: right;
   box-shadow: inset 5px 0 5px -5px #29627e;
   font-style: italic;
@@ -47,10 +47,10 @@ div {
 }
 
 /* The Modal (background) */
-.modal {
+.modalWindow {
   display: none; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 16; 
   left: 0;
   top: 0;
   width: 100%;
@@ -61,7 +61,7 @@ div {
 }
 
 /* Modal Content */
-.modal-content {
+.modalContent {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -99,15 +99,15 @@ div {
 }
 
 /* The Close Button */
-.close {
+.closeX {
   color: lightgrey;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeX:hover,
+.closeX:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -126,11 +126,13 @@ div {
   text-indent: 15%;
 }
 
-h4{
+h5 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-
+ h3{
+  text-align: center;
+}
 
 
 /*End of the modal*/
