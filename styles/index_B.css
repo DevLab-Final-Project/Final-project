@@ -16,7 +16,7 @@ body{
 
 /*Header and footer*/
 .logo {
-    height: 50px;
+    height: 70px;
     width: auto;
     transition: transform .2s;
     position: absolute;
@@ -27,8 +27,8 @@ body{
 
   .navbar-brand {
     padding: 40px 50px;
-    height: 30px;
-    width: 100px;
+    height: 75px;
+    width: 150px;
   }
   
   .logo:hover {
