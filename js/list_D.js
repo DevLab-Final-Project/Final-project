@@ -3,6 +3,15 @@
 
 
 var res=localStorage.getItem("Category")
+var body=document.getElementsByTagName('body')[0]
+if( res = 'techonolgy'){
+}
+if( res = 'sports'){
+
+}
+if( res = 'business'){
+
+}
 
 var date = document.getElementById('date');
 date.addEventListener('change',filter)
@@ -57,6 +66,10 @@ fetch(uri)
     var main = document.getElementById('MAIN')
     var text = document.getElementById('text').value;
     var name = document.getElementById('NAME');
+    var sour = document.getElementById('SOURCE');
+    var auth = document.getElementById('AUTHOR');
+
+
     var arr=[];
     var br=0;
     var k =0
@@ -81,6 +94,43 @@ fetch(uri)
 
         }
      }
+    }
+     if(sour.checked){
+        for(let i=0;i<100;i++){
+
+          if(date.articles[k1].source.name.toLowerCase().startsWith(text.toLowerCase()) ){
+              
+            arrnum[br2++]=k1++;
+        
+
+
+        }
+        else{
+            k1++;
+
+        }
+     }
+    }
+     if(auth.checked){
+         
+        for(let i=0;i<100;i++){
+
+            if(date.articles[k1].author==null){
+                date.articles[k1].author='unknown'
+            }
+          if(date.articles[k1].author.toLowerCase().startsWith(text.toLowerCase()) ){
+              
+            arrnum[br2++]=k1++;
+        
+
+
+        }
+        else{
+            k1++;
+
+        }
+     }
+    }
     var nums  = document.getElementById('NUMBTN')
     show3()
     
@@ -145,8 +195,10 @@ fetch(uri)
     }
 }
 
-var source = document.getElementById('SOURCE');
-if(source.checked){
+
+
+
+if(sour.checked){
     for(let i = 0;i<=3;i++){
 
          if(k>=100){
@@ -200,7 +252,6 @@ if(source.checked){
         }
     }
 }
-    var auth = document.getElementById('AUTHOR');
 if(auth.checked){
 
         for(let i = 0;i<=3;i++){ 
@@ -375,7 +426,6 @@ function goprev(e){
  //   show3()
 //}
 
-}
 })
 }
 function filter(e){

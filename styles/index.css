@@ -7,6 +7,11 @@
 .container1{
     margin-bottom: 30px;
 }
+@media only screen and (max-width: 991px) {
+    .containercontent{
+        display: block;
+    }
+}
 
 .sidebars{
     margin-top: 30px;

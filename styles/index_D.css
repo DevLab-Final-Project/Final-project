@@ -56,7 +56,18 @@ main{
     grid-template-rows: 10%,auto,2%;
     grid-template-columns: 100%;
 }
+@media only screen and (max-width: 500px){
 
+    .visibleslide .item{
+    }
+}
+
+@media only screen and (max-width: 717px){
+
+    .visibleslide .item{
+        width: 100%;
+    }
+}
 .title {
     font-size: 20px;
     color: white;
@@ -90,43 +101,67 @@ section{
     width:90% ;
 
 }
+@media only screen and (max-width: 991px){
+    section{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main{
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 .toprated{
+    margin-left: 20px;
+    margin-bottom: 50px;
     width: 100%;
     height: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    row-gap: 20px;
 }
-.toprated .row{
-    margin-bottom : 40px;
-    display: flex;
-    height: 15vh;
-    justify-content: space-around;
+@media only screen and (max-width: 768px){
 
+     .toprated{
+         grid-template-columns: 50% 50%;
+     }
 }
-.toprated .row .item2{
-    width: 30%;
+@media only screen and (max-width: 500px){
+
+    .toprated{
+        grid-template-columns: 100%;
+    }
+}
+.toprated .item2{
+    width: 90%;
     display:flex;
     flex-direction:row;
 }
-.toprated .row img{
-    margin-top: 20px;
+.toprated  .item2 img{
+    margin-top: auto;
     width:30%;
+    height: 100px;
+    margin-bottom: auto;
     transition: 1s;
     
 }
-.toprated .row img:hover{
+.toprated .item2 img:hover{
     cursor: pointer;
     opacity: 0.8;
     width: 33%;
 }
-.toprated .row .item2 .rightpart{
+.toprated .item2 .rightpart{
     width:65%;
     display:flex;
     flex-direction:column;
     margin-left: 10px;
     margin-bottom: auto;
     margin-top: auto;
+    font-size: 15px;
 
 }
-.toprated .row .item2 .rightpart p{
+.toprated .item2 .rightpart p{
     margin: 0px;
     padding: 0px;
 }
@@ -134,7 +169,10 @@ section{
     width: 10%;
     margin-left: 45%;
     margin-right: 45%;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
+
 /*model window */
 
 
@@ -203,7 +241,7 @@ section{
   .model-title{
     text-align: center;
     width:50%;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
     margin-left: auto;
     margin-right: auto;
@@ -226,7 +264,36 @@ section{
     width:80%;
     margin-left:auto;
     margin-right:auto;
-    font-size: 25px;
+    font-size: 20px;
+}
+@media only screen and (max-width: 1000px){
+
+    .model-img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 768px){
+
+    .model-title{
+        font-size: 20px;
+    }
+    .model-cont{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:  500px){
+
+    .model-title{
+        font-size: 15px;
+    }
+    .model-cont{
+        font-size: 15px;
+    }
+    .modal-img{
+        width: 30%;
+        height: 20%;
+    }
 }
 .model-moreinfo{
     
