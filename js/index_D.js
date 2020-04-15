@@ -48,14 +48,23 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
     
 })
 .then(date=>{
+    var wold = window.innerWidth;
+    console.log(wold)
     displayWindowSize()
     window.addEventListener("resize", displayWindowSize);
 
     function displayWindowSize(){ //want to chekc width after every change 
          w = document.documentElement.clientWidth;
         // Display result inside a div element
-    
-     
+        if(w!=wold){//want to check if width is changed 
+            console.log(w);
+            console.log(wold)
+            wold=w;
+            ifwchange();
+        }
+    }
+    ifwchange()
+     function ifwchange(){
 if(w>700){
     slider.innerHTML='';
     var arr=[]
@@ -253,10 +262,10 @@ else{
 }
 
 
-
-
-
 }
+
+
+
 )
 
 var vis;

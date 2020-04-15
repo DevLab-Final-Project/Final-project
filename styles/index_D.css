@@ -127,10 +127,11 @@ section{
          grid-template-columns: 50% 50%;
      }
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 550px){
 
     .toprated{
         grid-template-columns: 100%;
+        margin-left: 5px;
     }
 }
 .toprated .item2{
@@ -173,6 +174,13 @@ section{
     justify-self: flex-end;
 }
 
+
+@media only screen and (max-width: 550px){
+    .loadmore{
+        width:100px;
+    }
+
+}
 /*model window */
 
 
