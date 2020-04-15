@@ -1,3 +1,4 @@
+/* Andrea */
 * {    
     box-sizing: border-box;    
     font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -26,8 +27,7 @@
 }
 
 /* everything inside div is displayed as a grid*/
-.gridChild {    
-    box-sizing: border-box;    
+.gridChild {      
     display: grid;    
     grid-template-rows: 15% 55% 30%;    
     grid-auto-rows: minmax(1vh, auto);    
@@ -45,7 +45,7 @@
 .newsDescription {    
     align-self: center;    
     justify-self: start;    
-    margin: .5em;
+    margin: auto;
 }
 
 .newsImage {    
@@ -60,4 +60,105 @@ a:hover {
     -ms-transform: scale(0.8);    
     transform: scale(0.8);
     
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #gridContainer {  
+        display: grid;    
+        margin: 4em;    
+        grid-template-columns: repeat(1, 1fr);    
+        gap: 2em 3em;    
+        grid-auto-rows: minmax(40vh, auto); /*visina svakog diva*/    
+    }
+    .gridChild {       
+        display: grid;    
+        grid-template-rows: 15% 50% 35%;    
+        grid-auto-rows: minmax(1vh, auto);    
+        box-shadow: 15px 15px 15px 0px #6C7378;    
+        border-radius: 30px 30px 30px 30px;    
+        -moz-border-radius: 30px 30px 30px 30px;    
+        -webkit-border-radius: 30px 30px 30px 30px;
+    }
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    #gridContainer {    
+        display: grid;    
+        margin: 2em;    
+        grid-template-columns: repeat(2, 1fr);    
+        gap: 2em 3em;    
+        grid-auto-rows: minmax(40vh, auto); /*visina svakog diva*/    
+    }
+    .gridChild {       
+        display: grid;    
+        grid-template-rows: 15% 35% 50%;    
+        grid-auto-rows: minmax(1vh, auto);    
+        box-shadow: 15px 15px 15px 0px #6C7378;    
+        border-radius: 30px 30px 30px 30px;    
+        -moz-border-radius: 30px 30px 30px 30px;    
+        -webkit-border-radius: 30px 30px 30px 30px;
+    }
+}
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    #gridContainer {    
+        display: grid;    
+        margin: 3em;    
+        grid-template-columns: repeat(2, 1fr);    
+        gap: 3em 4em;    
+        grid-auto-rows: minmax(40vh, auto); /*visina svakog diva*/    
+    }
+    .gridChild {       
+        display: grid;    
+        grid-template-rows: 15% 50% 35%;    
+        grid-auto-rows: minmax(1vh, auto);    
+        box-shadow: 15px 15px 15px 0px #6C7378;    
+        border-radius: 30px 30px 30px 30px;    
+        -moz-border-radius: 30px 30px 30px 30px;    
+        -webkit-border-radius: 30px 30px 30px 30px;
+    }
+} 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    #gridContainer {    
+        display: grid;    
+        margin: 2em;    
+        grid-template-columns: repeat(3, 1fr);    
+        gap: 2em 3em;    
+        grid-auto-rows: minmax(40vh, auto); /*visina svakog diva*/    
+    }
+    .gridChild {       
+        display: grid;    
+        grid-template-rows: 15% 40% 45%;    
+        grid-auto-rows: minmax(1vh, auto);    
+        box-shadow: 15px 15px 15px 0px #6C7378;    
+        border-radius: 30px 30px 30px 30px;    
+        -moz-border-radius: 30px 30px 30px 30px;    
+        -webkit-border-radius: 30px 30px 30px 30px;
+    }
+} 
+   
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    #gridContainer {    
+        display: grid;    
+        margin: 2em;    
+        grid-template-columns: repeat(3, 1fr);    
+        gap: 2em 3em;    
+        grid-auto-rows: minmax(40vh, auto); /*visina svakog diva*/    
+    }
+    .gridChild {       
+        display: grid;    
+        grid-template-rows: 15% 50% 35%;    
+        grid-auto-rows: minmax(1vh, auto);    
+        box-shadow: 15px 15px 15px 0px #6C7378;    
+        border-radius: 30px 30px 30px 30px;    
+        -moz-border-radius: 30px 30px 30px 30px;    
+        -webkit-border-radius: 30px 30px 30px 30px;
+    }
 }
