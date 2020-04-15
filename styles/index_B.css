@@ -16,9 +16,19 @@ body{
 
 /*Header and footer*/
 .logo {
-    width: 100px;
-    height: 30px;
+    height: 50px;
+    width: auto;
     transition: transform .2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 30px;
+  }
+
+  .navbar-brand {
+    padding: 40px 50px;
+    height: 30px;
+    width: 100px;
   }
   
   .logo:hover {
@@ -54,6 +64,10 @@ body{
     text-align: center;
     padding: 25px 35px;
     text-decoration: none;
+  }
+
+  .footer-content a:hover {
+    opacity: 0.5;
   }
   
   .navbar a {
