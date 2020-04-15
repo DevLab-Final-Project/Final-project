@@ -1,4 +1,4 @@
-fetch("http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d25da6256e544f53ab8a1cb897e733a2")
+fetch("https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d25da6256e544f53ab8a1cb897e733a2")
   .then((response) => {
     return response.json();
   })
