@@ -33,7 +33,7 @@ fetch("http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d25da6256e5
     let modal = document.getElementById("myModal");
 
     // Get the <span> element that closes the modal
-    let span = document.getElementsByClassName("close")[0];
+    let span = document.getElementsByClassName("closeX")[0];
 
     let imgBestNews = document.querySelectorAll(".imgBestNews");
     for (let i=0; i<imgBestNews.length; i++){
