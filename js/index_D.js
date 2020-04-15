@@ -37,8 +37,9 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
     
 })
 .then(date=>{
-    
+    var arr=[]
     var k=0;
+    var br = 0;
     for(let j=0; j<=2;j++){
         
         if(date.articles[k]){
@@ -50,11 +51,26 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
             inp.setAttribute("type", "button");
             inp.setAttribute("value", "Read More");
             inp.className='readmorebtn';
-            inp.setAttribute("o",k) //saved number of article
+          //  inp.setAttribute("o",k) //saved number of article
+          
+          arr[br++]=k;
+          console.log(arr[br-1])
 
             //model window
             inp.addEventListener('click',(e)=>{
-                var br=e.target.getAttribute('o') 
+                br=0;
+                var checknum=e.target.parentElement.getElementsByTagName('p')[0].textContent;//find where is target
+                console.log(checknum)
+               for(let i=0;i<arr.length;i++){
+                if(checknum==date.articles[arr[br]].title){
+               break;
+                     }
+               else{
+                 br++;
+                    }
+                      }
+
+            //    var br=e.target.getAttribute('o') 
                 var body =document.getElementsByTagName('body')[0]
                 var model = document.createElement('div');
                 model.className='modal';
@@ -65,25 +81,25 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
 
                  var span = document.createElement('span');
                  span.className='close';
-                 span.textContent='&times'
+                 span.textContent='X'
                  modelcont.appendChild(span)
 
                  var title = document.createElement('p');
                  title.className='model-title'
-                 title.textContent=date.articles[br].title;
+                 title.textContent=date.articles[arr[br]].title;
 
                  var image=document.createElement('div');
                  image.className='model-img'
                  var img = document.createElement('img');
-                 img.setAttribute('src',date.articles[br].urlToImage);
+                 img.setAttribute('src',date.articles[arr[br]].urlToImage);
                  image.appendChild(img)
 
                 var author = document.createElement('p');
-                author.textContent ='Author:'+' '+ date.articles[br].author;
+                author.textContent ='Author:'+' '+ date.articles[arr[br]].author;
                 author.className='model-author'
 
                  var cont = document.createElement('p');
-                 cont.textContent=date.articles[br].content.substring(0,date.articles[br].content.indexOf('['));
+                 cont.textContent=date.articles[arr[br]].content.substring(0,date.articles[arr[br]].content.indexOf('['));
                  cont.className='model-cont'
 
                  modelcont.appendChild(title)
@@ -165,9 +181,10 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
 })
 .then(date=>{
    
-    var topr=document.getElementById('toprated')
-    var sec = document.getElementById('sect');
-    var k = 0;
+    var topr=document.getElementById('toprated') 
+    var arr=[]
+    var k=0;
+    var br = 0;
     for(let i=0;i<2;i++){
         var div = document.createElement('div');
         div.className='row';
@@ -180,12 +197,27 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
         
            var img = document.createElement('img');
            img.setAttribute('src',date.articles[k].urlToImage);
-
+           
+           arr[br++]=k;//save k
            //modalwindow!
-           img.setAttribute('o',k)
+         //  img.setAttribute('o',k)
 
            img.addEventListener('click',(e)=>{
-            var br=e.target.getAttribute('o') 
+            br=0;
+            var checknum=e.target.parentElement.getElementsByTagName('p')[0].textContent;//find where is target
+            console.log(checknum)
+           for(let i=0;i<arr.length;i++){
+            if(checknum=='Title:'+date.articles[arr[br]].title.substring(0,25)+'...'){
+           break;
+                 }
+           else{
+             br++;
+                }
+                  }
+
+
+           //var br=e.target.getAttribute('o') 
+
             var body =document.getElementsByTagName('body')[0]
             var model = document.createElement('div');
             model.className='modal';
@@ -196,25 +228,31 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
 
              var span = document.createElement('span');
              span.className='close';
-             span.textContent='&times'
+             span.textContent='X'
              modelcont.appendChild(span)
 
              var title = document.createElement('p');
              title.className='model-title'
-             title.textContent=date.articles[br].title;
+             title.textContent=date.articles[arr[br]].title;
 
              var image=document.createElement('div');
              image.className='model-img'
              var img = document.createElement('img');
-             img.setAttribute('src',date.articles[br].urlToImage);
+             img.setAttribute('src',date.articles[arr[br]].urlToImage);
              image.appendChild(img)
 
             var author = document.createElement('p');
-            author.textContent ='Author:'+' '+ date.articles[br].author;
+            author.textContent ='Author:'+' '+ date.articles[arr[br]].author;
             author.className='model-author'
 
+
+            var a = document.createElement('a');
+            a.textContent='read more';
+            a.setAttribute('href',date.articles[arr[br]].url)
+            a.setAttribute('target','blank_')
              var cont = document.createElement('p');
-             cont.textContent=date.articles[br].content.substring(0,date.articles[br].content.indexOf('['));
+             cont.textContent=date.articles[arr[br]].content.substring(0,date.articles[arr[br]].content.indexOf('['));
+             cont.appendChild(a)
              cont.className='model-cont'
 
              modelcont.appendChild(title)
@@ -292,7 +330,7 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
     
                  var span = document.createElement('span');
                  span.className='close';
-                 span.textContent='&times'
+                 span.textContent='X'
                  modelcont.appendChild(span)
     
                  var title = document.createElement('p');
