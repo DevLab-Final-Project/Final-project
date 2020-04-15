@@ -5,7 +5,7 @@
     <script src="https://kit.fontawesome.com/3cb4a77e3d.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index_B.css">
+    <link rel="stylesheet" href="./styles/index_B.css">
     <link rel="stylesheet" href="./styles/index_D.css">
     <link rel="stylesheet" href="./styles/indexA.css">
     <link rel="stylesheet" href="./styles/index.css">
@@ -19,11 +19,11 @@
     
         <div class="navbar">
             <a class="navbar-brand" href="index.html">
-                   <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Firefox_OS_Horizontal_SVG_Logo.svg/1280px-Firefox_OS_Horizontal_SVG_Logo.svg.png" alt="LOGO">
+                   <img class="logo" src="images/logo.png" alt="LOGO">
                  </a>
            <a class="current" href="index.html">Home</a>
            <div class="dropdown">
-             <button class="dropbtn"><a href="pages/list.html">List</a>
+             <button class="dropbtn"><a href="pages/list.html">Archive</a>
                <i class="fa fa-caret-down"></i>
              </button>
              <div class="dropdown-content">
@@ -33,9 +33,8 @@
                <a href="./pages/list.html" id="business">Business</a>
              </div>
            </div>
-           <a href="pages/custom.html">Source</a>
+           <a href="pages/custom.html">News sources</a>
            <a href="pages/about.html">About us</a>
-           <a href="pages/subscribe.html">Subscribe</a>
          </div>
          
     <div class="containercontent">
@@ -72,19 +71,19 @@
    </script>
 
    <div id="sidebarContainer">
-       <aside>
-           <h2>Best</h2>
+       <aside> 
+           <h3>Top headlines in techcrunch</h3>
            <div class="bestNews">
                <img class = "imgBestNews" id = "firstBestImg" src="" alt="">
-               <h4 id = "firstBestTitle" class = "bestTitle"></h4>
+               <h5 id = "firstBestTitle" class = "bestTitle"></h5>
            </div>
            <div class="bestNews">
                <img class = "imgBestNews" id = "secondBestImg" src="" alt="">
-               <h4 id = "secondBestTitle" class = "bestTitle"></h4>
+               <h5 id = "secondBestTitle" class = "bestTitle"></h5>
            </div>
            <div class="bestNews">
                <img class = "imgBestNews" id = "thirdBestImg" src="" alt="">
-               <h4 id = "thirdBestTitle" class = "bestTitle"></h4>
+               <h5 id = "thirdBestTitle" class = "bestTitle"></h5>
            </div>
        </aside>
        <aside>
@@ -98,20 +97,26 @@
    
 
    <!-- The Modal -->
-   <div id="myModal" class="modal">
+   <div id="myModal" class="modalWindow">
 
        <!-- Modal content -->
-       <div class="modal-content">
+       <div class="modalContent">
            <div class="modal-header">
-               <span class="close">&times;</span>
+               <span class="closeX">&times;</span>
            </div>
            <div class="modal-body">
-               <h4 id = "modalHeader"></h4>
-               <img id = "modalImg" src="" alt="">
-               <p id = "modalNewsAuthor"></p>
-               <p id = "modalNewsDescription"></p>
-               <p id = "modalNewsUrl"></p>
-               <p id = "modalNewsDate"></p>
+                <div id = "modalTitle">
+                    <h4 id = "modalHeader"></h4>
+                </div>
+                <div id = "modalImage">
+                    <img id = "modalImg" src="" alt="">
+                </div>
+                <div id = "modalTitleInfo">
+                    <p id = "modalNewsAuthor"></p>
+                    <p id = "modalNewsDescription"></p>
+                    <p id = "modalNewsUrl"></p>
+                    <p id = "modalNewsDate"></p>
+                </div>
            </div>
            
        </div>
@@ -124,8 +129,8 @@
   <div class="footer">
     <div class="footer-content">
      <a href="index.html" target="_blank">Home</a>
-     <a href="pages/list.html" target="_blank">List</a>
-     <a href="pages/custom.html" target="_blank">Custom Page</a>
+     <a href="pages/list.html" target="_blank">Archive</a>
+     <a href="pages/custom.html" target="_blank">News sources</a>
      <a href="pages/about.html" target="_blank">About us</a>
     </div>
    </div>
