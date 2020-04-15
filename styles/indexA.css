@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
+
 #sidebarContainer{
   display: flex;
   flex-direction: column;
@@ -182,6 +183,16 @@ div {
   margin-left: 3em;
 }
 
+#modalNewsUrl > a:link{
+  color: #000067;
+}
+
+
+#modalNewsUrl > a:hover{
+  text-decoration: underline;
+  color: #375EA8;
+}
+
 h5 {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -201,9 +212,22 @@ h5 {
 @media only screen and (min-width: 600px) {
   #sidebarContainer {display:none;}
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #sidebarContainer {display: block;}
+  .fbPage{
+    display: none;
+  }
+  .bestSidebar{
+    display: block;
+  }
 
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   #sidebarContainer {display: block;}
+  .fbPage{
+    display: block;
+  }
 }
