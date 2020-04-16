@@ -47,7 +47,6 @@ body{
   }
   
    .footer {
-    position: absolute;
     overflow: hidden;
     font-family: Arial;
     height: 60px;

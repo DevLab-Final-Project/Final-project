@@ -127,10 +127,11 @@ section{
          grid-template-columns: 50% 50%;
      }
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 550px){
 
     .toprated{
         grid-template-columns: 100%;
+        margin-left: 5px;
     }
 }
 .toprated .item2{
@@ -167,12 +168,23 @@ section{
 }
 .loadmore{
     width: 10%;
-    margin-left: 45%;
-    margin-right: 45%;
-    align-self: flex-end;
-    justify-self: flex-end;
+}
+.btn{
+    text-align: center;
 }
 
+@media only screen and (max-width: 550px){
+    .loadmore{
+        width:40%;
+    }
+    .btn{
+        width:80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+}
 /*model window */
 
 

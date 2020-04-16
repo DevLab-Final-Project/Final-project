@@ -1,14 +1,5 @@
 
 
-body{
-}
-
-
-.footer {
-    position: fixed;
-}
-
-
 
 
 .inputtext{
@@ -48,15 +39,57 @@ body{
     margin-bottom: auto;
 }
 .main{
-    height: 40vh;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
     column-gap: 20px;
+    height: 40vh;
 
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px){
+    .main{
+        width: 80%;
+    }
+
+    .filter{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .inputtext{
+        width: 80%;
+    }
+    .radio{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 700px){
+    .main{
+        grid-template-columns:100%;
+        row-gap: 10px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .inputtext :first-child{
+        width: 50%;
+    }
+    .inputtext :last-child{
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .inputtext{
+        margin-top: 40px;
+    }
 }
 .item{
     display: flex;
@@ -84,6 +117,7 @@ body{
     grid-template-columns: 50px auto 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
 
 }
 .prev{
@@ -106,6 +140,11 @@ body{
     margin-right: 0;
     margin-left: 0;
     width: auto;
+}
+@media only screen and (max-width: 700px){
+    .numbtn{
+        display: none;
+    }
 }
 .numbtn p{
     margin-left: 5px;
