@@ -145,8 +145,8 @@ body{
 
 /*----------------------*/
 
-@media screen and (max-width: 500px) {
-  .navbar {
+@media screen and (max-width: 768px){
+   .navbar {
     width: 100%;
     height: auto;
     overflow: visible;
@@ -154,6 +154,8 @@ body{
     float: none;
     display: block;
     text-align: left;
+    top: 0;
+    left: 0;
   }
   .navbar a {
     float: none;
@@ -175,5 +177,6 @@ body{
     display: block;
     text-align: left;
     overflow: visible;
-  }
+  } 
 }
+
