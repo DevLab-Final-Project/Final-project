@@ -53,7 +53,7 @@
     height: 100%;    
 }
 
-a:hover {    
+.gridChild > a:hover {    
     opacity: 0.5;    
     /*shrink animation*/    
     -webkit-transform: scale(0.8);    
