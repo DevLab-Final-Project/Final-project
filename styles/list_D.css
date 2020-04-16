@@ -44,6 +44,7 @@
     margin-right: auto;
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-top: -100px;
     column-gap: 20px;
     height: 40vh;
 
@@ -58,6 +59,8 @@
     margin:10rem 13rem .5em 13rem;
     border: 5px groove;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 div > #form{
     position: relative;
@@ -65,9 +68,7 @@ div > #form{
     margin: 1em;
 }
 @media only screen and (max-width: 900px){
-    body{
-        background-color: purple;
-    }
+  
     .main{
         width: 90%;
     }
@@ -85,9 +86,7 @@ div > #form{
     }
 }
 @media only screen and (max-width: 700px){
-    body{
-        background-color: blue;
-    }
+   
     .main{
         grid-template-columns:100%;
         row-gap: 10px;
@@ -103,6 +102,7 @@ div > #form{
     }
 }
 
+
 .item{
     display: flex;
     border: 1px solid rgb(63, 61, 61);
@@ -111,9 +111,7 @@ div > #form{
     width:30%;
 }
 @media only screen and (max-width: 500px){
-    body{
-        background-color: green;
-    }
+    
     .inputtext{
         margin-top: 40px;
     }
@@ -131,11 +129,9 @@ div > #form{
     margin-left: auto;
 }
 @media only screen and (min-width: 800px){
-    body{
-        background-color: yellow;
-    }
+  
     #listHeading{
-        margin:10rem 17rem .5em 17rem;
+        margin:200px auto  10px auto;
         border: 5px outset;
         text-align: center;
     }
@@ -180,9 +176,7 @@ div > #form{
     width: auto;
 }
 @media only screen and (max-width: 700px){
-    body{
-        background-color: red;
-    }
+ 
     #listHeading{
         margin:10rem 5rem .5em 5rem;
         border: 5px outset;
@@ -193,11 +187,9 @@ div > #form{
     }
 }
 @media only screen and (max-width: 500px){
-    body{
-        background-color: orange;
-    }
+  
     #listHeading{
-        margin:2rem 5rem .5em 5rem;
+        margin:50px auto auto auto;
         border: 5px outset;
         text-align: center;
     }
@@ -211,4 +203,10 @@ div > #form{
 .numbtn p{
     margin-left: 5px;
     cursor: pointer;
+}
+@media only screen and (max-width: 500px){
+  
+    .main{
+        margin-top: 30px;
+    }
 }

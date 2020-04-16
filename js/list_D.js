@@ -22,7 +22,7 @@ var tech=document.getElementById('technology')
 
 
 
- 
+
 
 
 
@@ -76,7 +76,6 @@ function search(){
     var res=localStorage.getItem("Category")
   var header = document.getElementById('listHeading');
   header.innerHTML=res
-console.log(res)
   
     uri = 'https://newsapi.org/v2/everything?q='+res+'&from='+startDate+'&to='+startDate+'&pageSize=100&apiKey=312463b31a7c4c65992ccb16c86425c2'
 
@@ -353,7 +352,7 @@ for(let j = 1; j<=Math.floor(arrnum.length/4+1);j++)
     var p = document.createElement('p');
     p.textContent=j;
     nums.appendChild(p)
-   // p.addEventListener('click',gotonum)
+ //   p.addEventListener('click',gotonum)
 
 }
 }
@@ -363,7 +362,7 @@ else{
     var p = document.createElement('p');
     p.textContent=j;
     nums.appendChild(p)
-  //  p.addEventListener('click',gotonum)
+    p.addEventListener('click',gotonum)
 
 }
 }
@@ -444,7 +443,6 @@ function goprev(e){
             arr.pop()
         }
         else{
-            main.innerHTML='go back please :D '
         }
     }
     
@@ -453,14 +451,36 @@ function goprev(e){
 
 
 
-//function gotonum(e){
-//  a = parseInt(e.target.textContent)
-  //  k=arrnum[a*4]
-   // br=(a*4-1);
-  //  arr.length=br+4;
- //   console.log(k)
- //   show3()
-//}
+function gotonum(e){
+    arr=[]
+  a = parseInt(e.target.textContent)
+  for(let i=0;i<(a)*4-3;i++){
+     arr[i]=arrnum[i];
+     br=i;
+
+ }
+ 
+ k=arr.length-1;
+ show3()
+ 
+}
+function gotonum2(e){
+    arr=[]
+    console.log(arr)
+    console.log(arrnum)
+    a = parseInt(e.target.textContent)
+    b=arrnum.length%4;
+    for(let i=0;i<(a)*4-3;i++){
+        arr[i]=arrnum[i];
+        br=i;
+   
+    }
+    
+    console.log(arr)
+    k=arr.length+4-b;
+    console.log(k)
+    show3()
+}
 
 })
 }
