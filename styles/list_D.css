@@ -54,7 +54,20 @@
     width: 100%;
 }
 
+#listHeading{
+    margin:10rem 13rem .5em 13rem;
+    border: 5px groove;
+    text-align: center;
+}
+div > #form{
+    position: relative;
+    bottom: 8rem;
+    margin: 1em;
+}
 @media only screen and (max-width: 900px){
+    body{
+        background-color: purple;
+    }
     .main{
         width: 90%;
     }
@@ -72,6 +85,9 @@
     }
 }
 @media only screen and (max-width: 700px){
+    body{
+        background-color: blue;
+    }
     .main{
         grid-template-columns:100%;
         row-gap: 10px;
@@ -95,6 +111,9 @@
     width:30%;
 }
 @media only screen and (max-width: 500px){
+    body{
+        background-color: green;
+    }
     .inputtext{
         margin-top: 40px;
     }
@@ -112,6 +131,14 @@
     margin-left: auto;
 }
 @media only screen and (min-width: 800px){
+    body{
+        background-color: yellow;
+    }
+    #listHeading{
+        margin:10rem 17rem .5em 17rem;
+        border: 5px outset;
+        text-align: center;
+    }
     .rightside{
         padding-top: 25px;
     }
@@ -153,8 +180,32 @@
     width: auto;
 }
 @media only screen and (max-width: 700px){
+    body{
+        background-color: red;
+    }
+    #listHeading{
+        margin:10rem 5rem .5em 5rem;
+        border: 5px outset;
+        text-align: center;
+    }
     .numbtn{
         display: none;
+    }
+}
+@media only screen and (max-width: 500px){
+    body{
+        background-color: orange;
+    }
+    #listHeading{
+        margin:2rem 5rem .5em 5rem;
+        border: 5px outset;
+        text-align: center;
+    }
+    .numbtn{
+        display: none;
+    }
+    #form{
+        top: 1rem;
     }
 }
 .numbtn p{
