@@ -54,9 +54,9 @@
     width: 100%;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 900px){
     .main{
-        width: 80%;
+        width: 90%;
     }
 
     .filter{
@@ -86,17 +86,23 @@
         width: 30%;
     }
 }
-@media only screen and (max-width: 500px){
-    .inputtext{
-        margin-top: 40px;
-    }
-}
+
 .item{
     display: flex;
     border: 1px solid rgb(63, 61, 61);
 }
 .item .image{
     width:30%;
+}
+@media only screen and (max-width: 500px){
+    .inputtext{
+        margin-top: 40px;
+    }
+    img{
+        height: 150px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
 .rightside{
     width: 65%;
@@ -105,7 +111,12 @@
     padding: 10px;
     margin-left: auto;
 }
-
+@media only screen and (min-width: 800px){
+    .rightside{
+        padding-top: 25px;
+    }
+}
+    
 .rightside p{
    
     margin: 0;

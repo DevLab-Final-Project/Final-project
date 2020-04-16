@@ -18,7 +18,7 @@
 
 
 main{
-    width: 90%;
+    width: 95%;
     display: flex;
     background-color: white;
     height: 45vh;
@@ -98,7 +98,7 @@ main{
     opacity: 0.8;
 }
 section{
-    width:90% ;
+    width:95% ;
 
 }
 @media only screen and (max-width: 991px){
