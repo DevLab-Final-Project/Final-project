@@ -23,6 +23,18 @@ main{
     background-color: white;
     height: 45vh;
 }
+
+.container1 > h1, #sect > h1{
+    padding: 0.5rem;
+    border: 5px inset;
+}
+.container1 > h1{
+    margin: 1.5em 2em 0.2em 1em;
+}
+#sect > h1{
+    margin: 1em 0.7em 1.2em 1em;
+}
+
 .slider {
     height: 95%;
     display: flex;
@@ -57,13 +69,14 @@ main{
     grid-template-columns: 100%;
 }
 @media only screen and (max-width: 500px){
-
     .visibleslide .item{
     }
 }
 
 @media only screen and (max-width: 717px){
-
+    .container1 > h1{
+        margin: 3em 2em 0.2em 1em;
+    }
     .visibleslide .item{
         width: 100%;
     }
@@ -122,13 +135,11 @@ section{
     row-gap: 20px;
 }
 @media only screen and (max-width: 768px){
-
      .toprated{
          grid-template-columns: 50% 50%;
      }
 }
 @media only screen and (max-width: 550px){
-
     .toprated{
         grid-template-columns: 100%;
         margin-left: 5px;
@@ -279,14 +290,22 @@ section{
     font-size: 20px;
 }
 @media only screen and (max-width: 1000px){
-
+    .container1 > h1{
+        margin: 4em 1em 0.2em 1em;
+    }
+    
     .model-img{
         width: 200px;
         height: 200px;
     }
 }
 @media only screen and (max-width: 768px){
-
+    .container1 > h1{
+        margin: 5em 1em 0.2em 1em;
+    }
+    .container1 > h1, #sect > h1{
+        text-align: center;
+    }
     .model-title{
         font-size: 20px;
     }
@@ -295,7 +314,12 @@ section{
     }
 }
 @media only screen and (max-width:  500px){
-
+    .container1 > h1{
+        margin: 2.5em 1em 0.2em 1em;
+    }
+    .container1 > h1, #sect > h1{
+        text-align: center;
+    }
     .model-title{
         font-size: 15px;
     }
