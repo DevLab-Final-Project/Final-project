@@ -21,6 +21,8 @@ search();
 var next;
 var prev;
 function search(){
+
+
     if(next!=undefined){
         next.remove()
     }
@@ -37,6 +39,13 @@ function search(){
     day_2=parseInt(day_2);
     var finishDate = year + '-' + month + '-' + day_2;
     
+
+    
+    
+    var label = document.getElementById('label');
+    label.innerHTML='News from: '+startDate;
+
+
     var list = document.getElementById('NUMS');
 
      prev = document.createElement('p');
@@ -167,8 +176,11 @@ fetch(uri)
         var div = document.createElement('div');
         div.className='rightside';
 
+        if(date.articles[k].author==null){
+            date.articles[k].author='unknown'
+        }
             var author = document.createElement('p');
-            author.textContent='Author:'+ ' ' + date.articles[k].author;
+            author.textContent='Author:'+ ' ' + date.articles[k].author.substring(0,25)+'...';
            
     
 
@@ -226,8 +238,11 @@ if(sour.checked){
         var div = document.createElement('div');
         div.className='rightside';
 
+        if(date.articles[k].author==null){
+            date.articles[k].author='unknown'
+        }
         var author = document.createElement('p');
-        author.textContent='Author:'+ ' ' + date.articles[k].author;
+        author.textContent='Author:'+ ' ' + date.articles[k].author.substring(0,25)+'...';
        
 
         var title = document.createElement('p');
@@ -283,8 +298,11 @@ if(auth.checked){
         var div = document.createElement('div');
         div.className='rightside';
 
+        if(date.articles[k].author==null){
+            date.articles[k].author='unknown'
+        }
             var author = document.createElement('p');
-            author.textContent='Author:'+ ' ' + date.articles[k].author;
+            author.textContent='Author:'+ ' ' + date.articles[k].author.substring(0,25)+'...';
           
     
 

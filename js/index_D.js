@@ -10,8 +10,6 @@ var section = document.getElementsByTagName('section')[0]
 
 
 
-
-
  sport.addEventListener('click',()=>{
  localStorage.setItem("Category",'sports' )})
     
@@ -268,13 +266,36 @@ else{
 
 )
 
+
+
+
+slider.addEventListener('mouseenter',addevent);
+slider.addEventListener( 'mouseleave' ,removeevent);
+function removeevent(){
+    window.removeEventListener('keydown',checkkay)
+}
+function addevent(e){
+    window.addEventListener('keydown',checkkay)
+}
+function checkkay(e){
+    if(e.key=='ArrowRight' ){
+    gonext()
+    }
+    if(e.key=='ArrowLeft')
+    goprev()
+}
+function removeevent(){
+    window.removeEventListener('keydown',checkkay)
+}
+
+
 var vis;
 next.addEventListener('click', gonext);
 prev.addEventListener('click', goprev)
     var counter = 0;
 next.addEventListener('click', gonext);
 function gonext(){
-    
+
     var vis=document.querySelectorAll('.visibleslide') 
     if(counter>=vis.length-1){
         counter=-1;
