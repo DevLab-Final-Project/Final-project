@@ -53,7 +53,7 @@ body{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #FF7F50;
+    background-color: #397188;
     text-align: center;
   }
   
@@ -98,7 +98,7 @@ body{
   }
   
   .navbar a:hover, .dropdown:hover, .dropbtn {
-    background-color: red;
+    background-color:  #4B93B1;
   }
   
   .dropdown-content {
@@ -138,7 +138,7 @@ body{
   }
   
   .navbar .current {
-    background-color: red;
+    background-color: #4B93B1;
     color: #333;
     font-weight: bold;
   }
@@ -162,12 +162,10 @@ body{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     padding: 50px 70px;
     background-color: #ffdd76;
-    width: 150px;
-    height: 200px;
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
     border-radius: 25px;
-    
+    width: min-content;
     animation: 1.2s ease-out 0s 1 fromBellow;
   }
   
