@@ -162,6 +162,13 @@ body{
       text-align: left;
     }
     
+    .dropdown {
+      float: none;
+      overflow: hidden;
+      display: block;
+      text-align: left;
+    }
+    
     .footer {
       width: 100%;
       height: auto;

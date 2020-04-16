@@ -160,6 +160,13 @@ body{
       display: block;
       text-align: left;
     }
+
+    .dropdown {
+      float: none;
+      overflow: hidden;
+      display: block;
+      text-align: left;
+    }
     
     .footer {
       width: 100%;
