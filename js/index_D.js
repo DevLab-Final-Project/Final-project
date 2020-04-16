@@ -1,6 +1,9 @@
 var slider = document.getElementById('slide')
 var next = document.getElementById('next')
 var prev = document.getElementById('prev');
+
+
+
 var sport=document.getElementById('sports')
 var busin=document.getElementById('business')
 var tech=document.getElementById('technology')

@@ -1,17 +1,32 @@
 
 
+var sport=document.getElementById('sports')
+var busin=document.getElementById('business')
+var tech=document.getElementById('technology')
 
 
-var res=localStorage.getItem("Category")
+
+
+
+ sport.addEventListener('click',()=>{
+ localStorage.setItem("Category",'sports' )})
+    
+    
+ busin.addEventListener('click',()=>{
+ localStorage.setItem("Category",'business' )})
+
+
+ tech.addEventListener('click',()=>{
+ localStorage.setItem("Category",'technology' )})
+
+
+
+
+ 
+
+
+
 var body=document.getElementsByTagName('body')[0]
-if( res = 'techonolgy'){
-}
-if( res = 'sports'){
-
-}
-if( res = 'business'){
-
-}
 
 var date = document.getElementById('date');
 date.addEventListener('change',filter)
@@ -37,7 +52,6 @@ function search(){
     var year = dateObj.getFullYear();
     var startDate = year + '-' + month + '-' + day_1;
     day_2=parseInt(day_2);
-    var finishDate = year + '-' + month + '-' + day_2;
     
 
     
@@ -59,6 +73,10 @@ function search(){
     list.appendChild(next);
 
 
+    var res=localStorage.getItem("Category")
+  var header = document.getElementById('listHeading');
+  header.innerHTML=res
+console.log(res)
   
     uri = 'https://newsapi.org/v2/everything?q='+res+'&from='+startDate+'&to='+startDate+'&pageSize=100&apiKey=312463b31a7c4c65992ccb16c86425c2'
 
