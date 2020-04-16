@@ -32,13 +32,14 @@ var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
 var day_2 = ('0' + dateObj.getDate()).slice(-2);
 day_1=parseInt(day_2)-1
 var year = dateObj.getFullYear();
-var shortDate = year + '/' + month + '/' + day_1;
+var shortDate = year + '/' + month + '/' + day_2;
+console.log(day_2)
 
 
 
 
 // Attaching the event listener function to window's resize event
-fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'&to='+year+'-'+month+'-'+day_2+'&sortBy=popularity&apiKey=312463b31a7c4c65992ccb16c86425c2')
+fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_2+'&to='+year+'-'+month+'-'+day_2+'&sortBy=popularity&apiKey=312463b31a7c4c65992ccb16c86425c2')
 .then(resp=>{
     if (resp.ok){
         return resp.json();
@@ -50,7 +51,6 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
 })
 .then(date=>{
     var wold = window.innerWidth;
-    console.log(wold)
     displayWindowSize()
     window.addEventListener("resize", displayWindowSize);
 
@@ -58,8 +58,6 @@ fetch('https://newsapi.org/v2/everything?q=all&from='+year+'-'+month+'-'+day_1+'
          w = document.documentElement.clientWidth;
         // Display result inside a div element
         if(w!=wold){//want to check if width is changed 
-            console.log(w);
-            console.log(wold)
             wold=w;
             ifwchange();
         }
@@ -127,8 +125,13 @@ if(w>700){
                 author.textContent ='Author:'+' '+ date.articles[arr[br]].author;
                 author.className='model-author'
 
+                var a = document.createElement('a');
+                a.textContent='read more';
+                a.setAttribute('href',date.articles[arr[br]].url)
+                a.setAttribute('target','blank_')
                  var cont = document.createElement('p');
                  cont.textContent=date.articles[arr[br]].content.substring(0,date.articles[arr[br]].content.indexOf('['));
+                 cont.appendChild(a)
                  cont.className='model-cont'
 
                  modelcont.appendChild(title)
@@ -223,8 +226,13 @@ else{
                 author.textContent ='Author:'+' '+ date.articles[arr[br]].author;
                 author.className='model-author'
 
+                var a = document.createElement('a');
+                a.textContent='read more';
+                a.setAttribute('href',date.articles[arr[br]].url)
+                a.setAttribute('target','blank_')
                  var cont = document.createElement('p');
                  cont.textContent=date.articles[arr[br]].content.substring(0,date.articles[arr[br]].content.indexOf('['));
+                 cont.appendChild(a)
                  cont.className='model-cont'
 
                  modelcont.appendChild(title)
@@ -483,10 +491,21 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
 
 
                //modalwindo
-               img.setAttribute('o',k)
-
+             //  img.setAttribute('o',k)
+             arr[br++]=k;//save k
                img.addEventListener('click',(e)=>{
-                var br=e.target.getAttribute('o') 
+                br=0;
+                var checknum=e.target.parentElement.getElementsByTagName('p')[0].textContent;//find where is target
+               for(let i=0;i<arr.length;i++){
+                if(checknum=='Title:'+date.articles[br].title.substring(0,25)+'...'){
+               break;
+                     }
+               else{
+                 br++;
+                    }
+                      }
+
+
                 var body =document.getElementsByTagName('body')[0]
                 var model = document.createElement('div');
                 model.className='modal';
@@ -514,9 +533,18 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
                 author.textContent ='Author:'+' '+ date.articles[br].author;
                 author.className='model-author'
     
-                 var cont = document.createElement('p');
-                 cont.textContent=date.articles[br].content.substring(0,date.articles[br].content.indexOf('['));
-                 cont.className='model-cont'
+
+
+
+                var a = document.createElement('a');
+            a.textContent='read more';
+            a.setAttribute('href',date.articles[arr[br]].url)
+            a.setAttribute('target','blank_')
+             var cont = document.createElement('p');
+             cont.textContent=date.articles[arr[br]].content.substring(0,date.articles[arr[br]].content.indexOf('['));
+             cont.appendChild(a)
+             cont.className='model-cont'
+
     
                  modelcont.appendChild(title)
                  modelcont.appendChild(image)
@@ -539,7 +567,7 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=312463b31a7c4c6599
                info.className='rightpart'
                div_2.appendChild(info)
                var title = document.createElement('p');
-               title.innerHTML='Title: '+date.articles[k].title.substring(0,25)+'...';
+               title.innerHTML='Title:'+date.articles[k].title.substring(0,25)+'...';
                var description = document.createElement('p');
                description.innerHTML='Description: '+date.articles[k].description.substring(0,30)+'...';
                var pub = document.createElement('p');
