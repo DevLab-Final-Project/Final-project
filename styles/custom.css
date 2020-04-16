@@ -1,10 +1,15 @@
 /* Andrea */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Alegreya:wght@400;500&display=swap');
 * {    
     box-sizing: border-box;    
-    font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+body{
+    font-family: "Alegreya Sans", Verdana, Arial, Helvetica, sans-serif;
 }
 
 #pageTitle {    
+    font-size: 3em;
     text-align: center;
     margin-bottom: 2em;
 }
@@ -43,7 +48,12 @@
     justify-self: center;
 }
 
-.newsDescription {    
+.newsName{
+    font-size: 1.8em;
+}
+
+.newsDescription {   
+    font-size: 1.22em; 
     align-self: center;    
     justify-self: start;    
     margin: auto;
@@ -115,7 +125,7 @@
     }
     .gridChild {       
         display: grid;    
-        grid-template-rows: 15% 50% 35%;    
+        grid-template-rows: 15% 45% 40%;    
         grid-auto-rows: minmax(1vh, auto);    
         box-shadow: 15px 15px 15px 0px #6C7378;    
         border-radius: 30px 30px 30px 30px;    
